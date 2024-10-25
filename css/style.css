@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --color-bg0: #FFFFFF;
+    --color-bg1: #190361;
+    --color-bg2: #BB00FF;
+    --color-bg3: #E4EDF1;
+    --color-text1: #34335B;
+    --color-button: #FF9500;
+}
+
+body {
+    background: linear-gradient(45deg, var(--color-bg1) 0%, var(--color-bg2) 100%);
+    font-size: 1.6rem;
+    background-size: 150% 150%;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    animation: girarGradiente 10s linear infinite; /* Adiciona a animação */
+}
+
+@keyframes girarGradiente {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
+
+
+body, input, button {
+    font-family: "DM Sans", sans-serif;
+}
+
+
+
+.hide {
+    display: none;
+}
+
+/* Screen1 */
+
+main {
+    background: var(--color-bg0);
+    box-shadow: 0rem 2rem 5rem rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+    width: min(42.8rem, 90%);
+    margin-top: -12rem;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-top: 4.8rem;
+}
+
+h1, p {
+    color: var(--color-text1);
+}
+
+p {
+    opacity: 0.8;
+    margin-top: 1.4rem;
+}
+
+main .screen1 img {
+    margin: 2rem 0 6.4rem;
+    width: min(25rem, 80%);
+    cursor: pointer;
+}
+
+main .screen1 img:hover {
+    animation: shake 0.2s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    20% { transform: translate(-0.2rem, 0.2rem) rotate(-2deg); }
+    40% { transform: translate(0.2rem, -0.2rem) rotate(2deg); }
+    60% { transform: translate(-0.2rem, 0.2rem) rotate(-1deg); }
+    80% { transform: translate(0.2rem, -0.2rem) rotate(1deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }  
+}
+
+
+main .screen2 #msg-sorte {
+    margin: 1.7rem auto 0;
+
+    padding: 1rem;
+
+    font-family: "Dancing Script", cursive;
+    font-size: 2.4rem;
+    background: var(--color-bg3);
+
+    width: min(29.3rem, 80%);
+
+    animation: fade-msg 2s forwards;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(85, 85, 85, 0.5);
+}
+
+
+@keyframes fade-msg {
+    0% { 
+        transform: translateY(18rem) scale(0.1);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+main .screen2 #cookie-open {
+    margin: 6rem 0 6rem;
+    width: min(30rem, 80%);
+
+}
+
+main .screen2 button {
+    text-align: center;
+    padding: 1.6rem;
+    width: min(17.4rem, 80%);
+    background: var(--color-button);
+    border-radius: 0.4rem;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-bg0);
+    margin-bottom: 4.8rem;
+}
+
+
+
+
+
+
+
